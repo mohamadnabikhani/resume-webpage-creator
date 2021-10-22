@@ -1,0 +1,161 @@
+.profile {
+  width: 34vw;
+  padding: 4vh 3vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: fixed;
+  color: #fff !important;
+}
+
+@media (max-width: 660px) {
+  .profile {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+  }
+  .profileUp {
+    justify-content: center;
+  }
+  .buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  .buttons > div {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.profileDown {
+  padding-right: 0.24rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileDown h1 {
+  margin: 5px 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.profileDown h2 {
+  margin: 3px 0;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.profileDown h3 {
+  margin: 3px 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.brH2 {
+  display: none;
+}
+
+.buttons {
+  font-size: 0.96rem;
+  margin-top: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.buttons button {
+  outline: none;
+  font-family: inherit;
+  margin-right: 0.5em;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.buttons button:last-child {
+  margin-right: 0;
+}
+.buttons > div:first-child {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.but {
+  /* background-color: var(--red); */
+  color: var(--dark-black);
+  font-weight: 700;
+  height: 36px;
+  border: none;
+  /* border-radius: 0.2em; */
+  padding: 0 0.5em;
+  border-radius: 6px;
+  /* border: 1px var(--red) solid; */
+}
+
+.svgBut {
+  padding: 0;
+  display: flex;
+  background-color: var(--dark-black);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.svgBut > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  /* border: 2px rgb(70, 90, 88) solid; */
+}
+
+.svgBut > a svg > path {
+  fill: rgb(225, 238, 237);
+}
+
+.svgBut > a > * {
+  width: inherit;
+  height: inherit;
+}
+
+@media (hover: hover) {
+  .svgBut > a:hover .svgBut {
+    background-color: var(--light-green);
+    transition: background-color 0.2s linear;
+  }
+  .svgBut > a:hover svg > path {
+    fill: var(--light-green);
+    transition: fill 0.2s linear;
+  }
+  .but:hover {
+    background-color: var(--light-green);
+    /* -webkit-transition: background-color 1s linear;
+    -ms-transition: background-color 1s linear; */
+    transition: background-color 0.2s linear;
+  }
+}
+
+.profileUp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  min-width: 12rem;
+  border-radius: 50%;
+  margin: 50px 0;
+}
+.profileUp > img {
+  width: 250px;
+  border-radius: 50%;
+}
