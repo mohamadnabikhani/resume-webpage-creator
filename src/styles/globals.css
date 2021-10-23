@@ -385,7 +385,7 @@ a {
   }
 }
 
-@media (orientation: landscape) and (max-width: 800px) {
+@media (orientation: landscape) and (max-width: 1000px) {
   .display {
     width: 100%;
     padding: 4vh 5vw;
