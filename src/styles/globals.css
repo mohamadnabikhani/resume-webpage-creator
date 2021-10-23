@@ -1,13 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --dark-black: rgb(21, 21, 21);
-  --light-gray: rgb(34, 34, 34);
-  --text: rgb(233, 233, 233);
-  --white: rgb(8, 8, 8);
-  --border: #393939;
-  --red: rgb(236, 24, 57);
-  --light-green: rgb(70, 90, 88);
+  /* https://www.jordanprindledesigns.com/blog/color-palettes */
+
+  /* --main-background: #0c2431;
+  --main-text: #e1dad2;
+  --card-background: #194a50;
+  --card-text: #e1dad2;
+  --header: #d8a28c;
+  --quote: #194a50;
+  --line: #d37556; */
+
+  /* --main-background: #565c5e;
+  --main-text: #b5c2c7;
+  --card-background: #455954;
+  --card-text: #dfdbd8;
+  --header: #dfdbd8;
+  --quote: #194a50;
+  --line: #d37556; */
+
+  /* --main-background: #514c4a;
+  --main-text: #dad5d2;
+  --card-background: #a4998c;
+  --card-text: #514c4a;
+  --header: #dfdbd8;
+  --quote: #194a50;
+  --line: #c78a44; */
+
+  --main-background: #1b1719;
+  --main-text: #b69b7d;
+  --card-background: #393d3a;
+  --card-text: #d4d6d5;
+  --header: #b69b7d;
+  --quote: #393d3a;
+  --line: #b69b7d;
 }
 li {
   list-style: none;
@@ -15,7 +41,7 @@ li {
 h1,
 h2,
 h3 {
-  color: white;
+  color: var(--header);
 }
 * {
   padding: 0;
@@ -29,8 +55,8 @@ h3 {
 
 html,
 body {
-  background-color: var(--dark-black);
-  color: var(--text);
+  background-color: var(--main-background);
+  color: var(--main-text);
   margin: 0%;
   padding: 0%;
   width: 100vw;
@@ -46,9 +72,9 @@ a {
   text-decoration: none;
 }
 
-.colorRed {
+/* .colorRed {
   color: var(--red);
-}
+} */
 
 .container {
   display: flex;
@@ -82,7 +108,7 @@ a {
   position: absolute;
   bottom: calc(0.32em + 4px);
   left: 0;
-  background-color: var(--light-green);
+  background-color: var(--line);
   width: 100px;
 }
 .sectionCont h2::after {
@@ -91,7 +117,7 @@ a {
   position: absolute;
   bottom: 0.16em;
   left: 0;
-  background-color: var(--light-gray);
+  background-color: var(--line);
   width: 50px;
 }
 
@@ -132,7 +158,7 @@ a {
 }
 .sectionContAbout p > strong {
   font-weight: 600;
-  color: white;
+  color: var(--line);
   cursor: pointer;
 }
 
@@ -156,7 +182,13 @@ a {
   width: 100%;
   padding: 1.2em;
   border-radius: 0.9rem;
-  background-color: var(--light-gray);
+  background-color: var(--card-background);
+  color: var(--card-text);
+}
+.card h1,
+.card h2,
+.card h3 {
+  color: var(--card-text);
 }
 .sectionContExperience,
 .sectionContEducation {
@@ -184,7 +216,7 @@ a {
   position: absolute;
   top: calc(0.6em - 0.5rem);
   left: calc(-1.8rem - 0.5rem - 5px);
-  background-color: var(--border);
+  background-color: var(--line);
   border-radius: 100%;
 }
 
@@ -200,7 +232,7 @@ a {
   position: absolute;
   top: 0.78125rem;
   left: 0;
-  background-color: var(--border);
+  background-color: var(--line);
   width: 1px;
 }
 
@@ -270,7 +302,8 @@ a {
 }
 
 .cardCont {
-  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 10px;
   padding: 10px;
   /* display: inline; */
@@ -290,7 +323,7 @@ a {
 }
 
 .cardCont > .timeline h5 svg > path {
-  fill: var(--text);
+  fill: var(--card-text);
 }
 
 .skill-card .skill-section {
@@ -308,7 +341,7 @@ a {
   position: absolute;
   bottom: 0em;
   left: 0;
-  background-color: var(--light-green);
+  background-color: var(--line);
   width: 50%;
 }
 
@@ -355,7 +388,7 @@ a {
 .quote-container {
   display: flex;
   flex-direction: column;
-  color: var(--light-green);
+  color: var(--quote);
   font-size: 15px;
   padding-left: 160px;
   font-style: italic;
@@ -396,8 +429,8 @@ a {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: max-content;
-  background-color: var(--light-green);
-  color: var(--text);
+  background-color: var(--main-text);
+  color: var(--main-background);
   text-align: center;
   border-radius: 4px;
   padding: 7px;
