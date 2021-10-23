@@ -385,6 +385,13 @@ a {
   }
 }
 
+@media (orientation: landscape) and (max-width: 800px) {
+  .display {
+    width: 100%;
+    padding: 4vh 5vw;
+  }
+}
+
 .quote-container {
   display: flex;
   flex-direction: column;

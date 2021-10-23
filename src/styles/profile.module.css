@@ -32,6 +32,28 @@
   }
 }
 
+@media (orientation: landscape) and (max-width: 800px) {
+  .profile {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row;
+  }
+  .profileUp {
+    justify-content: center;
+  }
+  .buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  .buttons > div {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .profileDown {
   padding-right: 0.24rem;
   width: 100%;
