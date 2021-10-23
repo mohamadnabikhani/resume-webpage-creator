@@ -46,7 +46,7 @@ export default function Profile() {
               
               <button className={`${styles.svgBut}`}>
                 <a target="_blank" href="/pdf/resume.pdf" className="tooltip">
-                  <span class="tooltiptext">Download Resume</span>
+                  <span className="tooltiptext">Download Resume</span>
                   <Resume/>
                 </a>
               </button>

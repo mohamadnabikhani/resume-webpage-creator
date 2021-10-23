@@ -4,13 +4,13 @@ import Education from "./sections/education";
 import Experience from "./sections/experience";
 import Skills from "./sections/skills";
 import Quote from "./sections/quote";
-// import Grid from "./sections/grid";
+import Grid from "./sections/grid";
 
 function App() {
   return (
     <div className="App">
       <Profile/>
-      {/* <Grid/> */}
+      <Grid/>
       <div className="display">
         
         <Quote/>
