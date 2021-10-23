@@ -179,12 +179,12 @@ a {
 .sectionContExperience h5::before,
 .sectionContEducation h5::before {
   content: "";
-  height: 1rem;
-  width: 1rem;
+  height: 8px;
+  width: 8px;
   position: absolute;
   top: calc(0.6em - 0.5rem);
-  left: calc(-1.8rem - 0.5rem + 2px);
-  background-color: var(--red);
+  left: calc(-1.8rem - 0.5rem - 5px);
+  background-color: var(--border);
   border-radius: 100%;
 }
 
@@ -200,8 +200,8 @@ a {
   position: absolute;
   top: 0.78125rem;
   left: 0;
-  background-color: var(--red);
-  width: 4px;
+  background-color: var(--border);
+  width: 1px;
 }
 
 .cardContent > .cardCont {
@@ -269,9 +269,12 @@ a {
   visibility: hidden;
 }
 
-/* .cardCont > .timeline {
-  display: inline;
-} */
+.cardCont {
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 10px;
+  /* display: inline; */
+}
 
 .cardCont > h5 {
   display: flex;
@@ -319,6 +322,7 @@ a {
 }
 
 .App {
+  /* z-index: 100; */
   margin: 0%;
   padding: 0%;
   width: 100vw;
@@ -328,6 +332,7 @@ a {
 }
 
 .display {
+  /* z-index: 10; */
   flex-direction: column;
   width: 100vw;
   padding: 4vh 5vw;
@@ -351,7 +356,7 @@ a {
   display: flex;
   flex-direction: column;
   color: var(--light-green);
-  font-size: 25px;
+  font-size: 15px;
   padding-left: 160px;
   font-style: italic;
   text-align: justify;
@@ -360,4 +365,49 @@ a {
 .quote-container span {
   direction: rtl;
   padding-right: 100px;
+}
+
+/* grid */
+
+.node {
+  width: 5vh;
+  height: 5vh;
+  /* background-color: white; */
+  outline: 1px solid rgba(161, 144, 175, 0.75);
+  display: grid;
+}
+.grid-row {
+  display: flex;
+}
+.grid {
+  top: 0;
+  right: 0;
+  position: fixed;
+  text-align: center;
+  z-index: -1;
+}
+
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+  /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: var(--light-green);
+  color: var(--text);
+  text-align: center;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 12px;
+  /* Position the tooltip */
+  position: absolute;
+  top: -40px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

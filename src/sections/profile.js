@@ -1,6 +1,7 @@
 import styles from '../styles/profile.module.css';
 import Linkedin from '../svg/linkedin.js';
 import Github from '../svg/github.js';
+import Resume from '../svg/resume.js';
 
 export default function Profile() {
   const name = 'Mohammad Nabikhani';
@@ -14,13 +15,13 @@ export default function Profile() {
         <section className={styles.profileDown}>
           <h1>{name}</h1>
           <h2>
-            Web Developer |
+            Software Developer
             <span className={styles.brH2}>
               <br />
             </span>{' '}
-            Bachelor of Engineering
+
           </h2>
-          <h3>HTML / CSS / JS / React</h3>
+          <h3>JS / TS / React</h3>
           <h3>
             <a href={`mailto:${email}`}>{email}</a>
           </h3>
@@ -43,9 +44,10 @@ export default function Profile() {
                 </a>
               </button>
               
-              <button className={`${styles.but}`}>
-                <a target="_blank" href="/pdf/resume_francisco_pantoja.pdf">
-                  DOWNLOAD RESUME
+              <button className={`${styles.svgBut}`}>
+                <a target="_blank" href="/pdf/resume.pdf" className="tooltip">
+                  <span class="tooltiptext">Download Resume</span>
+                  <Resume/>
                 </a>
               </button>
             </div>
