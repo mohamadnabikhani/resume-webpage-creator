@@ -21,7 +21,7 @@ export default function Profile() {
             </span>{' '}
 
           </h2>
-          <h3>JS / TS / React</h3>
+          <h3>Linux . Kubernetes . Docker . NodeJs . TypeScript . Golang . Solidity</h3>
           <h3>
             <a href={`mailto:${email}`}>{email}</a>
           </h3>

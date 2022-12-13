@@ -371,7 +371,7 @@ a {
   flex-direction: column;
   width: 100vw;
   padding: 4vh 5vw;
-  height: 100%;
+  height: 100vh;
   display: inline-block;
   padding-left: 36vw;
   padding-right: 5vw;
